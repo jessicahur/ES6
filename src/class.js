@@ -1,18 +1,23 @@
 'use strict';
-
-class Tree {
-  constructor(){
+class BaseTree {
+  constructor() {
     this.fruit = 0;
+  }
+}
+
+class Tree extends BaseTree {
+  constructor() {
+    super();
   }
   makeFruits(){
     ++this.fruit;
   }
 }
 
-function main(numPpl, numFruits) {
+export default function main(numPpl, numFruits) {
   var plants = [];
   var week = 1;
-  var result = 0;
+
   calculate(numPpl, numFruits);
   function calculate(numPpl, numFruits){
     if (week ===1) {
@@ -42,11 +47,9 @@ function main(numPpl, numFruits) {
     if (totalFruits < numPpl) {
       calculate(numPpl, totalFruits);
     }
-    else {
-      result = week;
-    }
+
   }//end of function calculate
-  return result;
+  return week;
 }
 
 // var a = main(200, 15);

@@ -32,8 +32,6 @@
     "jshint": "^2.8.0",
     "jshint-stylish": "^2.1.0",
     "mocha": "^2.3.4",
-    "mongodb": "^3.3.12",
-    "mongoose": "^4.3.6",
     "nodemon": "^1.8.1"
   },
   "babel": {

@@ -1,5 +1,4 @@
 import chai from 'chai';
-// import chaiHttp from 'chai-Http';
 import fs from 'fs';
 const assert = chai.assert;
 const expect = chai.expect;
@@ -9,7 +8,10 @@ import main from '../src/class';
 describe ('CLASS ES6', function() {
 
   it('should sucessfully import the export default function and give the expected answer', function(){
-    let numWeeks = main(150000, 250);
-    assert.equal(numWeeks, 9);
+    let array = [[], [200,15], [50000,1], [150000, 250]];
+    let results = [5, 5, 14, 9];
+    let calculated = array.map((elemArray) => main(elemArray[0], elemArray[1]));
+    console.log(calculated);
+    assert.deepEqual(calculated, results);
   });
 })

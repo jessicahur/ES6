@@ -14,7 +14,7 @@ class Tree extends BaseTree {
   }
 }
 
-export default function main(numPpl, numFruits) {
+function main(numPpl=15, numFruits=1) {
   var plants = [];
   var week = 1;
 
@@ -49,15 +49,16 @@ export default function main(numPpl, numFruits) {
     }
 
   }//end of function calculate
+  console.log(`Number of weeks is: ${week}`);
   return week;
 }
 
 // var a = main(200, 15);
-// console.log(a);
+// console.log(a);//5
 // var b = main(15, 1);
-// console.log(b);
+// console.log(b);//5
 // var c = main(50000, 1);
-// console.log(c);
+// console.log(c);//14
 // var d = main(150000, 250);
-// console.log(d);
-
+// console.log(d);//9
+module.exports = main;

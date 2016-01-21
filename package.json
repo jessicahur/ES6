@@ -4,7 +4,7 @@
   "description": "Rewrite Tue 1/12/2016 code challenge in ES6",
   "main": "index.js",
   "scripts": {
-    "test": "gulp testing",
+    "test": "gulp default",
     "start": "node index.js"
   },
   "repository": {

@@ -45,38 +45,29 @@ function main() {
     if (week === 1) {
       for (var ii = 0; ii < numFruits; ii++) {
         plants.push(new Tree());
-        // console.log(plants);
       }
       week++;
-    } //end of if
-    else {
-        for (var jj = 0; jj < numFruits; jj++) {
-          plants.push(new Tree());
-        }
-        week++;
-      } //end of else
+    } else {
+      for (var jj = 0; jj < numFruits; jj++) {
+        plants.push(new Tree());
+      }
+      week++;
+    }
 
     var totalFruits = 0;
-    // console.log('HERE',totalFruits);
 
     plants.forEach(function (plant) {
       plant.makeFruits();
       totalFruits += plant.fruit;
     });
 
-    // console.log('TOTAL FRUITS', totalFruits);
-
     if (totalFruits < numPpl) {
       calculate(numPpl, totalFruits);
     }
   } //end of function calculate
+
+  console.log('For ' + numPpl + ' people and ' + numFruits + ' fruits, the number of weeks is: ' + week);
   return week;
 }
-// var a = main(200, 15);
-// console.log(a);
-// var b = main(15, 1);
-// console.log(b);
-// var c = main(50000, 1);
-// console.log(c);
-// var d = main(150000, 250);
-// console.log(d);
+
+module.exports = main;

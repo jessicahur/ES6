@@ -20,18 +20,11 @@ function main(numPpl=15, numFruits=1) {
 
   calculate(numPpl, numFruits);
   function calculate(numPpl, numFruits){
-    if (week ===1) {
-      for (var ii = 0; ii < numFruits; ii++) {
-        plants.push(new Tree);
-      }
-      week++;
+
+    for (var ii = 0; ii < numFruits; ii++) {
+      plants.push(new Tree());
     }
-    else {
-      for (var jj = 0; jj < numFruits; jj++){
-        plants.push(new Tree());
-      }
-      week++;
-    }
+    week++;
 
     var totalFruits = 0;
 
